@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="all.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Gowun+Batang:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nanum+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/f7c5e00bb9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="all.js" defer></script>
+    <title>12'15 Cookies</title>
+  </head>
+
+  <body>
+    <!--NAVIGATION BAR-->
+    <div class="promos">
+      <span> COOKIES FOR SMILES &bull; BAKED JUST FOR YOU </span>
+    </div>
+
+    <nav class="navbar">
+      <div class="brand">
+        <i class="fa-solid fa-cookie-bite"></i>
+        <h2>12'15 Cookies</h2>
+      </div>
+
+      <ul class="navlinks">
+        <li>
+          <a href="#homepage"><span class="nl-home">Home</span></a>
+        </li>
+        <li>
+          <a href="#about"><span class="nl-aboutus"> About Us </span></a>
+        </li>
+        <li>
+          <a href="#how-to-order"><span class="nl-hto"> How to Order </span></a>
+        </li>
+
+        <li class="display-menu">
+          <button class="more-btn" aria-expanded="false">
+            More
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+
+          <ul class="dropdown">
+            <li><a href="#faqs"> FAQs </a></li>
+            <li><a href="#contactus"> Partner with Us </a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="cart">
+        <button class="nav-cart">
+          <i class="fa-solid fa-basket-shopping fa-xl"> </i
+          ><span class="cart-count"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!--HOMEPAGE-->
+    <section id="homepage">
+      <div class="welcome">
+        <div class="welcome-text">
+          <p class="home-qt">
+            Cookies for your <span class="sftm"> softest</span> moments.
+          </p>
+
+          <div class="btn-promo">
+            <a href="#cookies" class="btn-order">Order Now</a>
+
+            <p class="fb-promo">
+              Follow us on Facebook:
+              <a
+                href="https://www.facebook.com/profile.php?id=61559146461391"
+                target="_blank"
+                rel="noopener"
+              >
+                12'15 COOKIES
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <img src="images/frontpage.jpg" class="front-pic" />
+      </div>
+    </section>
+    <!--END OF HOMEPAGE-->
+
+    <!--SHOPPING CART-->
+    <div id="cart-window">
+      <div class="overlay"></div>
+      <div class="cart-box">
+        <div class="cart-head">
+          <!--PART 1-->
+          <div class="head-layout">
+            <div class="title-container">
+              <div class="basket-icon">
+                <!--basket icon beside your box-->
+                <i class="fa-solid fa-basket-shopping"></i>
+              </div>
+              <h1>Your Box</h1>
+              <!--Shopping Cart Name-->
+            </div>
+          </div>
+          <button class="cart-close">
+            <!--user closes the cart-->
+            <i class="fa-solid fa-x fa-xl"></i>
+          </button>
+        </div>
+
+        <span class="empty-cart-message">
+          Your cart is empty. Add a cookie!
+        </span>
+
+        <div id="cart-items">
+          <!--PART TWO-->
+          <ul class="cart-list" id="cart-list">
+            <!--ADD TO-->
+          </ul>
+        </div>
+
+        <div id="cart-checkout">
+          <!--PART THREE-->
+          <div id="total-amount">
+            <p>Total</p>
+            <span class="price"> &#8369;0.00</span>
+          </div>
+
+          <button id="checkout-button">Checkout</button>
+        </div>
+      </div>
+    </div>
+
+    <!--COOKIE SELECTION-->
+    <section id="cookies">
+      <h1 class="title">Meet Your Love at First Bite</h1>
+      <p class="pick">Pick your new match from our cookie collection!</p>
+
+      <div class="container">
+        <div class="cookies">
+          <div class="cookie-image">
+            <img
+              src="images/choc.png"
+              alt="Chocolate Chip Cookie"
+              width="200"
+              height="200"
+            />
+          </div>
+          <h2 class="fortitle">Chocolate Chip</h2>
+          <p class="forprices">&#8369; 85.00</p>
+          <button
+            class="button add-to-cart"
+            data-name="Chocolate Chip Cookie"
+            data-price="85.00"
+            data-img="images/choc.png"
+          >
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="cookies">
+          <div class="cookie-image">
+            <img
+              src="images/red.png"
+              alt="Red Velvet Cookie"
+              width="200"
+              height="200"
+            />
+          </div>
+          <h2 class="fortitle">Red Velvet</h2>
+          <p class="forprices">&#8369; 85.00</p>
+          <button
+            class="button add-to-cart"
+            data-name="Red Velvet Cookie"
+            data-price="85.00"
+            data-img="images/red.png"
+          >
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="cookies">
+          <div class="cookie-image">
+            <img
+              src="images/matcha.png"
+              alt="Matcha Cookie"
+              width="200"
+              height="200"
+            />
+          </div>
+          <h2 class="fortitle">Matcha</h2>
+          <p class="forprices">&#8369; 85.00</p>
+          <button
+            class="button add-to-cart"
+            data-name="Matcha Cookie"
+            data-price="85.00"
+            data-img="images/matcha.png"
+          >
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="cookies">
+          <div class="cookie-image">
+            <img
+              src="images/smores.png"
+              alt="Smores Cookie"
+              width="200"
+              height="200"
+            />
+          </div>
+          <h2 class="fortitle">Smores</h2>
+          <p class="forprices">&#8369; 85.00</p>
+          <button
+            class="button add-to-cart"
+            data-name="Smores Cookie"
+            data-price="85.00"
+            data-img="images/smores.png"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!--ABOUT-->
+    <section id="about">
+      <div class="content">
+        <h1 class="about">About 12'15</h1>
+      </div>
+
+      <div class="parag">
+        <p>
+          12’15 Cookies is a small cookie business founded by
+          <span class="name">Liam Rayala</span>, based in Manila, Philippines.
+        </p>
+
+        <div class="divider"></div>
+
+        <p>
+          We specialize in <span class="fresh">freshly</span> baked homemade
+          cookies made with quality ingredients and a passion for baking.
+        </p>
+      </div>
+
+      <div class="quote">
+        <p>
+          <b>&middot;</b> What started as a simple love for baking grew into a
+          small business dedicated to making every bite worth coming back for.
+          <b>&middot;</b>
+        </p>
+      </div>
+    </section>
+
+    <!-- HOW TO ORDER -->
+    <section id="how-to-order">
+      <main class="page-layout">
+        <section class="order-container">
+          <h2>How to Order</h2>
+
+          <div class="step" data-step="1">
+            <div class="num" tabindex="0" role="button" aria-pressed="false">
+              1
+            </div>
+            <div class="card">
+              <h3>Browse and Select Your Treats</h3>
+              <p>
+                Explore our menu of freshly baked cookies. Select your favorite
+                flavors and quantities, then click <b>Add to Cart</b>.
+              </p>
+            </div>
+          </div>
+
+          <div class="step" data-step="2">
+            <div class="num" tabindex="0" role="button" aria-pressed="false">
+              2
+            </div>
+            <div class="card">
+              <h3>Review Your Cart</h3>
+              <p>
+                Click the cart icon to check your order details such as the quantity of cookies before you proceed to <b>Checkout</b>.
+              </p>
+            </div>
+          </div>
+
+          <div class="step" data-step="3">
+            <div class="num" tabindex="0" role="button" aria-pressed="false">
+              3
+            </div>
+            <div class="card">
+              <h3> Fill Up the Necessary Details </h3>
+              <p>
+                Enter your name, contact number and preferred fullfillment method. Review your order summary and click <b> Copy Order </b> once you're content with your order.
+              </p>
+            </div>
+          </div>
+
+          <div class="step" data-step="4">
+            <div class="num" tabindex="0" role="button" aria-pressed="false">
+              4
+            </div>
+            <div class="card">
+              <h3>Send Your Order to our FB Page</h3>
+              <p>
+                Upon clicking <b> Order Here </b>, you will be redirected to our FB Page. Send the text you copied from the checkout section!
+              </p>
+            </div>
+          </div>
+
+          <div class="step" data-step="5">
+            <div class="num" tabindex="0" role="button" aria-pressed="false">
+              5
+            </div>
+            <div class="card">
+              <h3>Pay 50% of the Payment & Receive a Confirmation Message </h3>
+              <p>
+                We require our customers to pay atleast <b> 50% of the total order price </b>. Once we confirm your payment, we'll send a confirmation and process your order!
+              </p>
+              <br>
+              <p> Updates will be sent in a timely manner. Thank you for ordering!</p>
+            </div>
+          </div>
+        </section>
+
+        <aside class="order-photo">
+          <img src="images/rotatingcookies.png" alt="A selection of freshly baked cookies" />
+        </aside>
+      </main>
+    </section>
+
+ <!-- FAQ -->
+    <section id="faqs">
+        <div class="faq">
+            <h1>Frequently Asked Questions</h1>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Do you do same day delivery?</span>
+                    <span class="icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Nope! We currently <b>accept pre-orders only</b> to ensure that every batch of cookies is freshly baked and prepared just for you. We recommend placing your orders in advance to secure your preferred delivery date.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>What are your payment methods?</span>
+                    <span class="icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-answer">
+                    <p>We accept <b>GCash</b> payments for your convenience.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>How long do the cookies last?</span>
+                    <span class="icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Our cookies can last around <b>3–5 days</b> when stored at room temperature. For the best taste and freshness, keep them in an airtight container and store them in a cool, dry place.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>Are the cookies made to order?</span>
+                    <span class="icon" aria-hidden="true"></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yupp! Every order is <b>freshly made just for you</b>. We prepare our cookies upon receiving your order to make sure you get delicious, freshly baked treats every time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--PARTNER W US-->
+    <section id="contactus" class="partner">
+      <div class="envelope" id="envelope">
+        <div class="flap"></div>
+
+        <div class="letter">
+          <h2>
+            Want to Be Part of Our
+            <span class="nowrap"
+              >Family? <img class="emoji" src="images/logo.png" alt=""
+            /></span>
+          </h2>
+          <p>
+            Interested in becoming a 12’15 Cookies reseller?
+            <i>We’d love to have you!</i> Just send us a message for more
+            information about our reseller opportunities.
+          </p>
+        </div>
+
+        <div class="pocket"></div>
+      </div>
+    </section>
+
+    <!-- CHECKOUT SECTION-->
+    <section id="checkout-section" class="hidden">
+      <h1 class="checkout-title">Checkout</h1>
+
+      <div class="checkout-grid">
+        <!-- LEFT COLUMN -->
+        <div class="checkout-col">
+          <div class="checkout-box">
+            <h2>Order Summary</h2>
+            <ul id="summary-list"></ul>
+            <div class="summary-total">
+              <span>Total</span>
+              <span id="summary-total">&#8369;0.00</span>
+            </div>
+          </div>
+
+          <div class="checkout-box instructions">
+            <h3>How to Finalize Your Order</h3>
+            <ol>
+              <li>
+                Review your order details and make sure everything is correct.
+              </li>
+              <li>
+                Fill in your name, contact number, and choose between PICKUP or
+                DELIVERY.
+              </li>
+              <li>Press <b>Copy Order</b>.</li>
+              <li>
+                Press <b>Order Here</b> and you will be redirected to our
+                Facebook page.
+              </li>
+              <li>
+                Send us a message and <b>paste your order</b>. We'll confirm it
+                once we've received it!
+              </li>
+            </ol>
+          </div>
+
+          <button id="new-order-btn">Begin a New Order!</button>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="checkout-col">
+          <div class="checkout-box">
+            <h2>Copy Order Form!</h2>
+
+            <div class="form-fields">
+              <label for="cust-name">Name</label>
+              <input type="text" id="cust-name" placeholder="Your full name" />
+
+              <label for="cust-contact">Contact Number</label>
+              <input type="tel" id="cust-contact" placeholder="09XX XXX XXXX" />
+
+              <label for="cust-method">Pickup or Delivery</label>
+              <select id="cust-method">
+                <option value="">Choose one...</option>
+                <option value="Pickup">Pickup</option>
+                <option value="Delivery">Delivery</option>
+              </select>
+            </div>
+
+            <textarea id="order-text" rows="9"></textarea>
+            <button id="copy-button">Copy Order</button>
+          </div>
+
+          <a
+            id="order-here"
+            href="https://www.facebook.com/profile.php?id=61559146461391"
+            target="_blank"
+            rel="noopener"
+            >Order Here</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
