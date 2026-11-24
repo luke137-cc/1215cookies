@@ -2,7 +2,7 @@
     --purple-color: #060d46;
     --pink-color: #ff7df2;
     --offwhite-color: #f8f7f2;
-    --pink-light: #ffd2fa;     
+    --pink-light: #ffd2fa;
     --page-padding: 40px;
 }
 
@@ -12,7 +12,7 @@ img {
 
 body {
     margin: 0;
-    background-color: #f8f7f2;    
+    background-color: #f8f7f2;
     text-align: center;
     font-family: "Fraunces", serif;
 }
@@ -21,9 +21,11 @@ body::before {
     content: "";
     position: fixed;
     inset: 0;
-    z-index: -1;                   /* sits behind everything */
+    z-index: -1;
+    /* sits behind everything */
     background: url(images/vertical.png) center / cover no-repeat;
-    will-change: transform;        /* keeps it on its own GPU layer */
+    will-change: transform;
+    /* keeps it on its own GPU layer */
 }
 
 
@@ -36,15 +38,19 @@ html {
 #about,
 #checkout-section,
 #faqs {
-    scroll-margin-top: 70px;               /* navbar height */
+    scroll-margin-top: 70px;
+    /* navbar height */
 }
 
 #cookies {
-    min-height: calc(100vh - 70px);        /* screen height minus navbar */
+    min-height: calc(100vh - 70px);
+    /* screen height minus navbar */
     display: flex;
     flex-direction: column;
-    justify-content: center;               /* centers vertically */
-    align-items: center;                   /* centers the title and cookies horizontally */
+    justify-content: center;
+    /* centers vertically */
+    align-items: center;
+    /* centers the title and cookies horizontally */
     padding: 40px 0;
 }
 
@@ -876,12 +882,12 @@ a {
 }
 
 #about {
-    position: relative;           
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 60px 0 100px;
-    min-height: calc(100vh - 70px);            
+    min-height: calc(100vh - 70px);
     background-image: url(images/aboutus.png);
     background-size: cover;
     background-position: center;
@@ -916,7 +922,7 @@ a {
     font-style: italic;
     font-weight: 500;
     font-size: clamp(15px, 1.6vw, 19px);
-    text-shadow: 0px 5px 20px rgba(65, 24, 68, 0.4); 
+    text-shadow: 0px 5px 20px rgba(65, 24, 68, 0.4);
     background-color: rgba(6, 13, 70, 0.8);
 }
 
@@ -971,6 +977,7 @@ a {
 
 /* ---------- LARGE SCREENS ---------- */
 @media (min-width: 1500px) {
+
     .welcome,
     #checkout-section {
         max-width: 1400px;
@@ -1000,69 +1007,70 @@ a {
         padding: 0 20px;
         gap: 12px;
     }
+
     #how-to-order .page-layout {
         grid-template-columns: 1fr;
         padding: 20px;
         gap: 30px;
     }
-    }
+}
 
-    .navlinks {
-        gap: 18px;
-        padding-left: 0;
-        font-size: 16px;
-    }
+.navlinks {
+    gap: 18px;
+    padding-left: 0;
+    font-size: 16px;
+}
 
-    .welcome {
-        flex-direction: column;
-        gap: 30px;
-        padding-top: 30px;
-        padding-bottom: 40px;
-    }
+.welcome {
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
 
-    .welcome-text {
-        flex: none;
-        max-width: 100%;
-    }
+.welcome-text {
+    flex: none;
+    max-width: 100%;
+}
 
-    .home-qt {
-        width: auto;
-        font-size: 44px;
-    }
+.home-qt {
+    width: auto;
+    font-size: 44px;
+}
 
-    .btn-promo {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
+.btn-promo {
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
-    .front-pic {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
-        aspect-ratio: 4/5;
-    }
+.front-pic {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 4/5;
+}
 
-    .parag {
-        font-size: 23px;
-        padding: 0 30px;
-    }
+.parag {
+    font-size: 23px;
+    padding: 0 30px;
+}
 
-    .checkout-grid {
-        grid-template-columns: 1fr;
-    }
+.checkout-grid {
+    grid-template-columns: 1fr;
+}
 
-    .checkout-title {
-        font-size: 44px;
-    }
+.checkout-title {
+    font-size: 44px;
+}
 
 /* ========== HOW TO ORDER ========== */
 #how-to-order {
-    font-family: 'Fraunces', serif;  
-    color: var(--purple-color);      
+    font-family: 'Fraunces', serif;
+    color: var(--purple-color);
     position: relative;
 
     position: relative;
-    overflow: hidden;                        
+    overflow: hidden;
     min-height: calc(100vh - 70px);
     display: flex;
     align-items: center;
@@ -1095,8 +1103,13 @@ a {
 }
 
 @keyframes rotate-cookie-photo {
-    from { transform: translateY(var(--photo-offset-y)) rotate(0deg); }
-    to   { transform: translateY(var(--photo-offset-y)) rotate(360deg); }
+    from {
+        transform: translateY(var(--photo-offset-y)) rotate(0deg);
+    }
+
+    to {
+        transform: translateY(var(--photo-offset-y)) rotate(360deg);
+    }
 }
 
 #how-to-order .order-photo img {
@@ -1129,7 +1142,7 @@ a {
 #how-to-order .num {
     width: 75px;
     height: 70px;
-    background-color:  rgb(248, 212, 248);
+    background-color: rgb(248, 212, 248);
     color: var(--purple-color);
     font-size: 2.5rem;
     font-weight: bold;
@@ -1178,7 +1191,8 @@ a {
     line-height: 1.5;
     color: var(--purple-color);
     margin: 0;
-    display: none;                 /* hidden until the step is clicked */
+    display: none;
+    /* hidden until the step is clicked */
 }
 
 #how-to-order .step.active .card p {
@@ -1187,119 +1201,152 @@ a {
 }
 
 #faqs {
-  margin: 0;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: var(--purple-color);
-  font-family: "Fraunces", serif;
-  display: flex;
-  text-align: left;
-  justify-content: center;
-  padding: var(--page-padding) 20px;
+    margin: 0;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--purple-color);
+    font-family: "Fraunces", serif;
+    display: flex;
+    text-align: left;
+    justify-content: center;
+    padding: var(--page-padding) 20px;
 }
 
 .faq {
-  width: 100%;
-  max-width: 900px;
+    width: 100%;
+    max-width: 900px;
 }
 
 .faq h1 {
-  text-align: center;
-  font-size: clamp(1.8rem, 5vw, 2.8rem);
-  margin: 0 0 24px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--purple-color);
+    text-align: center;
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    margin: 0 0 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--purple-color);
 }
 
 .faq-item {
-  background: var(--offwhite-color);
-  border: 1.5px solid var(--purple-color);
-  border-radius: 10px;
-  margin-bottom: 22px;
-  overflow: hidden;
-  transition: background 0.2s ease;
+    background: var(--offwhite-color);
+    border: 1.5px solid var(--purple-color);
+    border-radius: 10px;
+    margin-bottom: 22px;
+    overflow: hidden;
+    transition: background 0.2s ease;
 }
 
 .faq-item:hover {
-  background: var(--pink-color);
+    background: var(--pink-color);
 }
 
 .faq-item.active {
-  background: var(--pink-light);
+    background: var(--pink-light);
 }
 
 .faq-question {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  padding: 26px 30px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  text-align: left;
-  font: inherit;
-  font-size: clamp(1.05rem, 2.5vw, 1.5rem);
-  color: var(--purple-color);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 26px 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font: inherit;
+    font-size: clamp(1.05rem, 2.5vw, 1.5rem);
+    color: var(--purple-color);
 }
 
 .faq-question:focus-visible {
-  outline: 3px solid var(--pink-color);
-  outline-offset: -3px;
+    outline: 3px solid var(--pink-color);
+    outline-offset: -3px;
 }
 
 .icon {
-  position: relative;
-  width: 26px;
-  height: 26px;
-  flex-shrink: 0;
+    position: relative;
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
 }
+
 .icon::before,
 .icon::after {
-  content: "";
-  position: absolute;
-  background: var(--purple-color);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: transform 0.3s ease;
+    content: "";
+    position: absolute;
+    background: var(--purple-color);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease;
 }
-.icon::before { width: 100%; height: 2.5px; }
-.icon::after  { width: 2.5px; height: 100%; }
+
+.icon::before {
+    width: 100%;
+    height: 2.5px;
+}
+
+.icon::after {
+    width: 2.5px;
+    height: 100%;
+}
 
 /* plus becomes minus when open */
 .faq-item.active .icon::after {
-  transform: translate(-50%, -50%) rotate(90deg);
+    transform: translate(-50%, -50%) rotate(90deg);
 }
 
 /* smooth open/close */
 .faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
 }
+
 .faq-answer p {
-  margin: 0;
-  padding: 0 30px 26px;
-  font-size: 1.1rem;
-  line-height: 1.6;
+    margin: 0;
+    padding: 0 30px 26px;
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 /* ========== PARTNER WITH US ========== */
 #contactus {
     --w: min(560px, 88vw, 70vh);
     min-height: calc(100vh - 70px);
+    scroll-margin-top: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background-image: url("images/partner.png");    
+    background-image: url("images/partner.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+#contactus .letter-email {
+    font-style: italic;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calc(var(--w) * 0.078);
+    font-family: "Gowun Batang", serif;
+    font-size: calc(var(--w) * 0.034);
+    font-weight: 700;
+    color: #060d46;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: #d9a3d3;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+#contactus .letter-email:hover,
+#contactus .letter-email:focus-visible {
+    color: #a64a9c;
+    text-decoration-color: #a64a9c;
 }
 
 #contactus .envelope {
@@ -1313,6 +1360,7 @@ a {
     cursor: pointer;
 }
 
+
 #contactus .flap {
     position: absolute;
     top: 0;
@@ -1322,9 +1370,10 @@ a {
     background: #d9a3d3;
     clip-path: polygon(0 0, 100% 0, 50% 100%);
     transform-origin: top;
-    transition: transform 0.8s ease, z-index 0s 0.4s;
+    transition: transform 0.8s ease 1s, z-index 0s 0.4s;
     z-index: 3;
 }
+
 
 #contactus .pocket {
     position: absolute;
@@ -1335,6 +1384,7 @@ a {
     z-index: 4;
     pointer-events: none;
 }
+
 
 #contactus .letter {
     position: absolute;
@@ -1348,8 +1398,9 @@ a {
     text-align: center;
     color: #060d46;
     z-index: 2;
-    transition: transform 1s ease 0.6s;
+    transition: transform 1s ease 0s;
 }
+
 
 #contactus .letter h2 {
     margin: 0 0 12px;
@@ -1359,6 +1410,7 @@ a {
     line-height: 1.15;
 }
 
+
 #contactus .letter p {
     margin: 0;
     font-family: "Gowun Batang", serif;
@@ -1366,9 +1418,11 @@ a {
     line-height: 1.6;
 }
 
+
 #contactus .nowrap {
     white-space: nowrap;
 }
+
 
 #contactus .letter .emoji {
     display: inline-block;
@@ -1378,15 +1432,19 @@ a {
     margin-left: 6px;
 }
 
+
 /* open state */
 #contactus .envelope.open .flap {
     transform: rotateX(180deg);
     z-index: 1;
+    transition: transform 1s ease 0s;
 }
+
 
 #contactus .envelope.open .letter {
     transform: translateY(calc(var(--w) * -0.52));
 }
+
 
 /* ---------- PHONES (up to 600px) ---------- */
 @media (max-width: 600px) {
@@ -1404,7 +1462,7 @@ a {
     }
 
     .brand h2 {
-        display: none; 
+        display: none;
     }
 
     .navlinks {
@@ -1477,7 +1535,7 @@ a {
     }
 
     .quote {
-        position: static;      
+        position: static;
         transform: none;
         width: 90%;
         margin: 30px auto 0;
@@ -1516,7 +1574,9 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    #how-to-order .order-photo { animation: none; }
+    #how-to-order .order-photo {
+        animation: none;
+    }
 }
 
 /* ---------- SMALL PHONES (up to 480px) ---------- */
@@ -1550,14 +1610,15 @@ a {
     }
 
     .item-qty {
-        margin-right: auto;     
+        margin-right: auto;
     }
 }
-    #how-to-order .order-photo {
-        --photo-offset-y: 0px;
-        left: 0;
-        width: 104%;
-    }
+
+#how-to-order .order-photo {
+    --photo-offset-y: 0px;
+    left: 0;
+    width: 104%;
+}
 
 
 @media (max-width: 500px) {

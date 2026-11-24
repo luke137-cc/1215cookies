@@ -234,71 +234,76 @@ if (moreBtn) {
 const faqItems = document.querySelectorAll(".faq-item");
 
 faqItems.forEach((item) => {
-  const button = item.querySelector(".faq-question");
-  const answer = item.querySelector(".faq-answer");
+    const button = item.querySelector(".faq-question");
+    const answer = item.querySelector(".faq-answer");
 
-  button.addEventListener("click", () => {
-    const isOpen = item.classList.contains("active");
+    button.addEventListener("click", () => {
+        const isOpen = item.classList.contains("active");
 
-    faqItems.forEach((otherItem) => {
-      otherItem.classList.remove("active");
-      otherItem.querySelector(".faq-question").setAttribute("aria-expanded", "false");
-      otherItem.querySelector(".faq-answer").style.maxHeight = null;
+        faqItems.forEach((otherItem) => {
+            otherItem.classList.remove("active");
+            otherItem.querySelector(".faq-question").setAttribute("aria-expanded", "false");
+            otherItem.querySelector(".faq-answer").style.maxHeight = null;
+        });
+
+        if (!isOpen) {
+            item.classList.add("active");
+            button.setAttribute("aria-expanded", "true");
+            answer.style.maxHeight = `${answer.scrollHeight}px`;
+        }
     });
-
-    if (!isOpen) {
-      item.classList.add("active");
-      button.setAttribute("aria-expanded", "true");
-      answer.style.maxHeight = `${answer.scrollHeight}px`;
-    }
-  });
 });
 
 // ---------- HOW TO ORDER ----------
 document.querySelectorAll("#how-to-order .step").forEach((step) => {
-  const numBtn = step.querySelector(".num");
-  const card = step.querySelector(".card");
+    const numBtn = step.querySelector(".num");
+    const card = step.querySelector(".card");
 
-  const toggleStep = () => {
-    const isActive = step.classList.toggle("active");
-    numBtn.setAttribute("aria-pressed", isActive);
-  };
+    const toggleStep = () => {
+        const isActive = step.classList.toggle("active");
+        numBtn.setAttribute("aria-pressed", isActive);
+    };
 
-  numBtn.addEventListener("click", toggleStep);
-  card.addEventListener("click", toggleStep);
+    numBtn.addEventListener("click", toggleStep);
+    card.addEventListener("click", toggleStep);
 
-  // keyboard support for the card (the number already has tabindex in the HTML)
-  card.setAttribute("tabindex", "0");
-  card.setAttribute("role", "button");
-  card.addEventListener("keydown", (event) => {
-    if (event.key === "Enter" || event.key === " ") {
-      event.preventDefault();
-      toggleStep();
-    }
-  });
+    // keyboard support for the card (the number already has tabindex in the HTML)
+    card.setAttribute("tabindex", "0");
+    card.setAttribute("role", "button");
+    card.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            toggleStep();
+        }
+    });
 });
 
 // ---------- PARTNER ENVELOPE ----------
 const partnerEnvelope = document.getElementById("envelope");
-const partnerSection  = document.getElementById("contactus");
+const partnerSection = document.getElementById("contactus");
 
 if (partnerEnvelope && partnerSection) {
-  // open the envelope when the section scrolls into view
-  new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => partnerEnvelope.classList.add("open"), 600);
-      } else {
-        partnerEnvelope.classList.remove("open"); // closes again so it replays next time
-      }
-    },
-    { threshold: 0.6 }
-  ).observe(partnerSection);
+    // open the envelope when the section scrolls into view
+    new IntersectionObserver(
+        ([entry]) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => partnerEnvelope.classList.add("open"), 600);
+            } else {
+                partnerEnvelope.classList.remove("open"); // closes again so it replays next time
+            }
+        },
+        { threshold: 0.6 }
+    ).observe(partnerSection);
 
-  // click the envelope to open or close it manually
-  partnerEnvelope.addEventListener("click", () =>
-    partnerEnvelope.classList.toggle("open")
-  );
+    // click the envelope to open or close it manually
+    partnerEnvelope.addEventListener("click", () =>
+        partnerEnvelope.classList.toggle("open")
+    );
+
+    envelope.addEventListener('click', (e) => {
+        if (e.target.closest('.letter-email')) return;
+        envelope.classList.toggle('open');
+    });
 }
 
 
