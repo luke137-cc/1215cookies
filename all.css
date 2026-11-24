@@ -1013,54 +1013,54 @@ a {
         padding: 20px;
         gap: 30px;
     }
-}
 
-.navlinks {
-    gap: 18px;
-    padding-left: 0;
-    font-size: 16px;
-}
+    .navlinks {
+        gap: 18px;
+        padding-left: 0;
+        font-size: 16px;
+    }
 
-.welcome {
-    flex-direction: column;
-    gap: 30px;
-    padding-top: 30px;
-    padding-bottom: 40px;
-}
+    .welcome {
+        flex-direction: column;
+        gap: 30px;
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
 
-.welcome-text {
-    flex: none;
-    max-width: 100%;
-}
+    .welcome-text {
+        flex: none;
+        max-width: 100%;
+    }
 
-.home-qt {
-    width: auto;
-    font-size: 44px;
-}
+    .home-qt {
+        width: auto;
+        font-size: 44px;
+    }
 
-.btn-promo {
-    justify-content: center;
-    flex-wrap: wrap;
-}
+    .btn-promo {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 
-.front-pic {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    aspect-ratio: 4/5;
-}
+    .front-pic {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        aspect-ratio: 4/5;
+    }
 
-.parag {
-    font-size: 23px;
-    padding: 0 30px;
-}
+    .parag {
+        font-size: 23px;
+        padding: 0 30px;
+    }
 
-.checkout-grid {
-    grid-template-columns: 1fr;
-}
+    .checkout-grid {
+        grid-template-columns: 1fr;
+    }
 
-.checkout-title {
-    font-size: 44px;
+    .checkout-title {
+        font-size: 44px;
+    }
 }
 
 /* ========== HOW TO ORDER ========== */
